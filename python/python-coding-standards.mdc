@@ -1,0 +1,62 @@
+---
+type: Auto Attached
+patterns: ["**/*.py"]
+description: Python coding standards and style guide
+---
+
+# Python Coding Standards
+
+## Code Style
+- Follow PEP 8 guidelines
+- Use type hints for all function parameters and return values
+- Maximum line length of 88 characters (Black formatter default)
+- Use double quotes for strings unless single quotes avoid escaping
+- Use f-strings for string formatting when possible
+
+## Code Organization
+- Group imports in this order: standard library, third-party, local imports
+- Use absolute imports when possible
+- Add docstrings to all functions, classes, and modules
+- Keep functions small and focused (ideally under 20 lines)
+
+## Error Handling
+- Use specific exception types rather than broad `except Exception`
+- Always include meaningful error messages
+- Use context managers (`with` statements) for resource management
+
+## Testing
+- Write tests for all new functions and classes
+- Use descriptive test names that explain what is being tested
+- Follow the AAA pattern: Arrange, Act, Assert
+- Aim for high test coverage but focus on critical paths
+
+## Example Code Structure
+```python
+from typing import List, Optional
+import logging
+
+logger = logging.getLogger(__name__)
+
+def process_data(data: List[str], filter_empty: bool = True) -> List[str]:
+    """Process a list of strings by filtering and cleaning.
+    
+    Args:
+        data: List of strings to process
+        filter_empty: Whether to remove empty strings
+        
+    Returns:
+        Processed list of strings
+        
+    Raises:
+        ValueError: If data is empty
+    """
+    if not data:
+        raise ValueError("Data cannot be empty")
+    
+    processed = [item.strip() for item in data]
+    
+    if filter_empty:
+        processed = [item for item in processed if item]
+    
+    return processed
+```

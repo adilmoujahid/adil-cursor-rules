@@ -1,0 +1,72 @@
+---
+type: Agent Requested
+description: UV package manager workflow and best practices
+---
+
+# UV Workflow Guide
+
+## Project Initialization
+```bash
+# Initialize new project
+uv init
+
+# Initialize with specific Python version
+uv init --python 3.11
+```
+
+## Dependency Management
+```bash
+# Add runtime dependency
+uv add requests pandas numpy
+
+# Add development dependency
+uv add --dev pytest black ruff mypy jupyter
+
+# Add dependency with version constraint
+uv add "fastapi>=0.100.0"
+
+# Remove dependency
+uv remove package-name
+
+# Update all dependencies
+uv sync
+
+# Install from pyproject.toml
+uv sync
+```
+
+## Running Commands
+```bash
+# Run Python scripts
+uv run python script.py
+
+# Run with arguments
+uv run python script.py --arg value
+
+# Run Jupyter
+uv run jupyter lab
+
+# Run tests
+uv run pytest
+
+# Run linting
+uv run ruff check .
+uv run black .
+```
+
+## Virtual Environment
+```bash
+# Activate virtual environment (if needed)
+source .venv/bin/activate  # Linux/Mac
+.venv\Scripts\activate     # Windows
+
+# But prefer using `uv run` instead of activating
+```
+
+## Best Practices
+- Always use `uv run` instead of activating the virtual environment
+- Use `uv sync` to ensure consistent dependencies across environments
+- Pin major versions for stability in production
+- Use development dependencies for tools that aren't needed in production
+- Keep pyproject.toml clean and well-organized
+- Use `uv add` and `uv remove` instead of editing pyproject.toml manually

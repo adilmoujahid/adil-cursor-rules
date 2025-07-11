@@ -1,0 +1,37 @@
+---
+type: Always
+description: Python project structure and organization standards
+---
+
+# Python Project Structure Rules
+
+## Project Organization
+- Use `uv` for all virtual environment and dependency management
+- Store all Jupyter notebooks in a `notebooks/` folder at the project root
+- Keep source code in a `src/` directory for larger projects or in the root for simple projects
+- Use `tests/` folder for all test files
+- Include a `pyproject.toml` file for project configuration
+
+## File Structure
+```
+project-root/
+├── src/              # Source code (for larger projects)
+├── notebooks/        # Jupyter notebooks
+├── tests/            # Test files
+├── pyproject.toml    # Project configuration
+├── README.md         # Project documentation
+└── .gitignore        # Git ignore file
+```
+
+## Dependencies
+- Always use `uv` commands for dependency management:
+  - `uv add package-name` to add dependencies
+  - `uv remove package-name` to remove dependencies
+  - `uv sync` to sync dependencies
+  - `uv run` to run commands in the virtual environment
+
+## Best Practices
+- Pin major versions in pyproject.toml for stability
+- Use development dependencies for testing, linting, and formatting tools
+- Keep notebooks clean and well-documented with markdown cells
+- Use descriptive names for notebooks that reflect their purpose

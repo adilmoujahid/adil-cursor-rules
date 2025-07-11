@@ -1,0 +1,54 @@
+---
+type: Auto Attached
+patterns: ["notebooks/**/*.ipynb"]
+description: Jupyter notebook standards and best practices
+---
+
+# Jupyter Notebook Standards
+
+## Notebook Organization
+- Store all notebooks in the `notebooks/` folder
+- Use descriptive filenames with dates if relevant (e.g., `2024-01-15_data_analysis.ipynb`)
+- Include a title and description in the first markdown cell
+- Add a table of contents for longer notebooks
+
+## Code Structure
+- Import all required libraries in the first code cell
+- Use one cell per logical operation or analysis step
+- Add markdown cells to explain the purpose of each section
+- Keep cells focused and avoid overly long code blocks
+
+## Best Practices
+- Clear all outputs before committing to version control
+- Use meaningful variable names that describe the data
+- Add comments to explain complex operations
+- Include data source information and assumptions
+- End with a summary or conclusion section
+
+## Template Structure
+```
+# Notebook Title
+Brief description of what this notebook does
+
+## Table of Contents
+1. Data Loading
+2. Data Exploration
+3. Analysis
+4. Results
+5. Conclusions
+
+## 1. Data Loading
+[Code cell with imports and data loading]
+
+## 2. Data Exploration
+[Code cells with exploration and markdown explanations]
+
+... and so on
+```
+
+## Data Science Specific
+- Always check for missing values and data types
+- Include data validation steps
+- Document any data transformations
+- Save important intermediate results
+- Include visualizations with proper titles and labels

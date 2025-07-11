@@ -1,0 +1,78 @@
+---
+type: Manual
+description: Template for creating clean, focused README.md files
+---
+
+# README Template
+
+Use this template when creating or updating README.md files. Keep it focused and practical.
+
+## Template Structure
+
+```markdown
+# Project Name
+
+Brief description of what the project does in 1-2 sentences.
+
+## Installation
+
+Install dependencies using uv:
+
+```bash
+uv sync
+```
+
+## Usage
+
+Basic usage examples:
+
+```bash
+# Run the main script
+uv run python main.py
+
+# Run with specific parameters
+uv run python main.py --option value
+```
+
+## Development
+
+Install development dependencies:
+
+```bash
+uv add --dev pytest black ruff mypy
+```
+
+Run tests:
+
+```bash
+uv run pytest
+```
+
+Format code:
+
+```bash
+uv run black .
+uv run ruff check .
+```
+
+## Project Structure
+
+```
+├── src/              # Source code
+├── notebooks/        # Jupyter notebooks
+├── tests/            # Test files
+└── pyproject.toml    # Project configuration
+```
+
+## License
+
+[Your license here]
+```
+
+## Guidelines
+- Keep descriptions concise and actionable
+- Only include uv-based installation and usage instructions
+- Don't include alternative package managers or deployment instructions
+- Focus on what users need to know to get started
+- Include project structure only if helpful for understanding the codebase
+- Skip sections that aren't relevant to your specific project
