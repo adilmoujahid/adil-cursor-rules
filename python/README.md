@@ -59,11 +59,11 @@ mkdir -p .cursor/rules
 cd .cursor/rules
 
 # Download all Python rules
-curl -O https://raw.githubusercontent.com/adilmoujahid/cursor-rules/main/python/python-project-structure.mdc
-curl -O https://raw.githubusercontent.com/adilmoujahid/cursor-rules/main/python/python-coding-standards.mdc
-curl -O https://raw.githubusercontent.com/adilmoujahid/cursor-rules/main/python/jupyter-notebook-standards.mdc
-curl -O https://raw.githubusercontent.com/adilmoujahid/cursor-rules/main/python/uv-workflow.mdc
-curl -O https://raw.githubusercontent.com/adilmoujahid/cursor-rules/main/python/readme-template.mdc
+curl -O https://raw.githubusercontent.com/adilmoujahid/adil-cursor-rules/main/python/python-project-structure.mdc
+curl -O https://raw.githubusercontent.com/adilmoujahid/adil-cursor-rules/main/python/python-coding-standards.mdc
+curl -O https://raw.githubusercontent.com/adilmoujahid/adil-cursor-rules/main/python/jupyter-notebook-standards.mdc
+curl -O https://raw.githubusercontent.com/adilmoujahid/adil-cursor-rules/main/python/uv-workflow.mdc
+curl -O https://raw.githubusercontent.com/adilmoujahid/adil-cursor-rules/main/python/readme-template.mdc
 ```
 
 ### Option 2: Selective Installation
